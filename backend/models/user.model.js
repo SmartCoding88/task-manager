@@ -6,7 +6,7 @@ const Role = require('./role.model');
 
 const userSchema = mongoose.Schema(
     {
-        _id: Schema.Types.ObjectId,
+       // _id: Schema.Types.ObjectId,
         first_name: { type: String, required: true },
         last_name: { type: String, required: true },
         email: { type: String, required: true },
@@ -14,7 +14,7 @@ const userSchema = mongoose.Schema(
         status: { type: Boolean, required: true },
         password: { type: String, required: true, minLength: 8 },
         phone: { type:String, required: true, unique: true},
-        roles: [{ type: Schema.Types.ObjectId, ref: 'Role' }],
+        role: [{ type: Schema.Types.ObjectId, ref: 'Role' }],
         updated: {
             type: Date
         },

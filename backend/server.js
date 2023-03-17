@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const cors = require('cors');
 
 const user_routes = require("./routes/user.route");
+const role_routes = require("./routes/role.route");
 
 const app = express();
 
@@ -30,6 +31,7 @@ app.use(express.static(path.join(__dirname, "www")));
 
 //user API
 app.use("/user", user_routes);
+app.use("/role", role_routes);
 
 app.listen(3000, () => {
     console.log("server is running on port 3000...");
