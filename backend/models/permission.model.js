@@ -9,9 +9,9 @@ const permissionsSchema = mongoose.Schema(
         title: {
             type: String,
             required: true,
-            enum: ['read', 'create', 'edit', 'delete']
-        },
-        default: ['read']
+            enum: ['read', 'create', 'edit', 'delete'],
+            default: ['read']
+        },      
     }
 )
 
